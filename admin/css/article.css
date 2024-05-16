@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*START: HEADER*/
+nav{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 7em;
+    align-items: center;
+    box-shadow: 0em 1px 10px rgb(0, 0, 0, .2);
+    margin-bottom: 2em;
+}
+nav img{
+    width: 5.5em;
+    /* border: 1px solid black; */
+    filter: brightness(0%);
+    margin: 1.5em 3em;
+    margin-right: 2.5em;
+    margin-bottom: 1em;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: .5em;
+    align-items: center;
+}
+nav ul a{
+    text-decoration: none;
+    margin: 1.5em;
+    color: black;
+    font-size: 20px;
+    font-family: League Spartan;
+    font-weight: 600;
+}
+#Sign-in{
+    padding: 8px 20px 8px 20px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 3em;
+    margin-right: 10px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+#Location a{
+    color: white;
+    text-decoration: none;
+}
+#Location{
+    padding: 8px 20px 8px 20px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    margin-right: 2em;
+    border-radius: 3em;
+    font-size: 16px;
+}
+
+nav ul .viewing{
+    content: '';
+    color: black;
+    padding-bottom: .3em;
+    border-bottom: 5px solid #693304;
+}
+nav li a:hover{
+    color: #5c391a;
+}
+nav a{
+    text-decoration: none;
+}
+nav .fa{
+    display: none;
+}
+nav .checkbtn{
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+
+@media(max-width: 768px){
+    nav ul a{
+        text-decoration: none;
+        margin: 1.5em;
+        color: black;
+        font-size: 17px;
+        font-family: League Spartan;
+        font-weight: 600;
+    }
+    #Location{
+        display: none;
+    }
+}
+
+@media(max-width: 650px){
+    nav ul .viewing{
+        color: white;
+        border-bottom: none;
+    }
+    nav ul a{
+        color: white;
+        margin: 2em;
+    }
+    nav ul{
+        z-index: 100;
+        position: fixed;
+        flex-direction: column;
+        background-color: black;
+        padding-left: 2em;
+        padding-top: 6em;
+        gap: 2em;
+        width: 15em;
+        height: 100%;
+        top: 0em;
+        right: -100em;
+        transition: all .5s;
+    }
+    nav .fa{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 1em;
+    }
+    nav .checkbtn{
+        display: block;
+    }
+    #check:checked ~ .checkbtn{
+        z-index: 300;
+        position: fixed;
+        right: 0;
+        color: white;
+    }
+    #check:checked ~ i{
+        z-index: 300;
+        color: white;
+    }
+    #check:checked ~ ul{
+        right: 0em;
+    }
+}
+
+@media(max-width: 426px){
+    nav ul .viewing{
+        color: white;
+        border-bottom: none;
+    }
+    nav ul a{
+        color: white;
+        margin: 2em;
+    }
+    nav ul{
+        z-index: 100;
+        position: fixed;
+        flex-direction: column;
+        background-color: black;
+        padding-left: 2em;
+        padding-top: 6em;
+        gap: 2em;
+        width: 15em;
+        height: 100%;
+        top: 0em;
+        right: -100em;
+        transition: all .5s;
+    }
+    nav .fa{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 1em;
+    }
+    nav .checkbtn{
+        display: block;
+    }
+    #check:checked ~ .checkbtn{
+        z-index: 300;
+        position: fixed;
+        right: 0;
+        color: white;
+    }
+    #check:checked ~ i{
+        z-index: 300;
+        color: white;
+    }
+    #check:checked ~ ul{
+        right: 0em;
+    }
+}
+/*END  : HEADER*/
+
+/*START: CONTENT*/
+.MainContainer {
+    margin: 0;
+}
+.ImageContainer {
+    position: relative;
+    margin: 60px 30px 0;
+}
+
+.ImageContainer img {
+    display: block;
+    margin: auto;
+    width: 88em; /* Adjusted width */
+    height: 65em; /* Adjusted height */
+    border-radius: 30px;
+    object-fit: cover;
+    opacity: 80%;
+}
+
+.TextContainer {
+    position: absolute;
+    /*width: calc(100% - 125px);  Adjusted width */
+    height: auto;
+    margin: 0 10em; 
+    top: 58em;
+}
+.ArticleContainer
+{
+    padding: 30px 30px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255, 0.85);
+}
+.ArticleContainer h1
+{
+    font-family: League Spartan;
+    font-size: 7em;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+.ArticleContainer h4
+{
+    font-family: League Spartan;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 10px 0 30px;
+}
+.ArticleContainer p
+{
+    font-family: League Spartan;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 80px;
+    line-height: 30px;
+    text-align: justify;
+}
+/*END: CONTENT*/
+
+
+
+
+
+

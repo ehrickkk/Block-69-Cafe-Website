@@ -12,6 +12,7 @@ html, body{
 }
 
 .to-top{
+  z-index: 200;
   position: fixed;
   background-color: black;
   border: 1px solid white;

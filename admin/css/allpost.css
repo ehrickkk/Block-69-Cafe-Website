@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*START: HEADER*/
+nav{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 7em;
+    align-items: center;
+    box-shadow: 0em 1px 10px rgb(0, 0, 0, .2);
+    margin-bottom: 2em;
+}
+nav img{
+    width: 5.5em;
+    /* border: 1px solid black; */
+    filter: brightness(0%);
+    margin: 1.5em 3em;
+    margin-right: 2.5em;
+    margin-bottom: 1em;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: .5em;
+    align-items: center;
+}
+nav ul a{
+    text-decoration: none;
+    margin: 1.5em;
+    color: black;
+    font-size: 20px;
+    font-family: League Spartan;
+    font-weight: 600;
+}
+#Sign-in{
+    padding: 8px 20px 8px 20px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 3em;
+    margin-right: 10px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+#Location a{
+    color: white;
+    text-decoration: none;
+}
+#Location{
+    padding: 8px 20px 8px 20px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    margin-right: 2em;
+    border-radius: 3em;
+    font-size: 16px;
+}
+
+nav ul .viewing{
+    content: '';
+    color: black;
+    padding-bottom: .3em;
+    border-bottom: 5px solid #693304;
+}
+nav li a:hover{
+    color: #5c391a;
+}
+nav a{
+    text-decoration: none;
+}
+nav .fa{
+    display: none;
+}
+nav .checkbtn{
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+
+@media(max-width: 768px){
+    nav ul a{
+        text-decoration: none;
+        margin: 1.5em;
+        color: black;
+        font-size: 17px;
+        font-family: League Spartan;
+        font-weight: 600;
+    }
+    #Location{
+        display: none;
+    }
+}
+
+@media(max-width: 650px){
+    nav ul .viewing{
+        color: white;
+        border-bottom: none;
+    }
+    nav ul a{
+        color: white;
+        margin: 2em;
+    }
+    nav ul{
+        z-index: 100;
+        position: fixed;
+        flex-direction: column;
+        background-color: black;
+        padding-left: 2em;
+        padding-top: 6em;
+        gap: 2em;
+        width: 15em;
+        height: 100%;
+        top: 0em;
+        right: -100em;
+        transition: all .5s;
+    }
+    nav .fa{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 1em;
+    }
+    nav .checkbtn{
+        display: block;
+    }
+    #check:checked ~ .checkbtn{
+        z-index: 300;
+        position: fixed;
+        right: 0;
+        color: white;
+    }
+    #check:checked ~ i{
+        z-index: 300;
+        color: white;
+    }
+    #check:checked ~ ul{
+        right: 0em;
+    }
+}
+
+@media(max-width: 426px){
+    nav ul .viewing{
+        color: white;
+        border-bottom: none;
+    }
+    nav ul a{
+        color: white;
+        margin: 2em;
+    }
+    nav ul{
+        z-index: 100;
+        position: fixed;
+        flex-direction: column;
+        background-color: black;
+        padding-left: 2em;
+        padding-top: 6em;
+        gap: 2em;
+        width: 15em;
+        height: 100%;
+        top: 0em;
+        right: -100em;
+        transition: all .5s;
+    }
+    nav .fa{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 1em;
+    }
+    nav .checkbtn{
+        display: block;
+    }
+    #check:checked ~ .checkbtn{
+        z-index: 300;
+        position: fixed;
+        right: 0;
+        color: white;
+    }
+    #check:checked ~ i{
+        z-index: 300;
+        color: white;
+    }
+    #check:checked ~ ul{
+        right: 0em;
+    }
+}
+/*END  : HEADER*/
+
+/*START: BLOG CONTENT*/
+.BlogMainContainer
+{
+    position: relative;
+    bottom: 90px;
+    margin: 12em 30px;
+}
+
+.BlogDivider
+{
+    margin: 1em 1.5em;
+}
+.BlogDivider h1
+{
+    font-family: League Spartan;
+    font-size: 60px;
+    font-weight: 800;
+}
+.BlogDivider hr
+{
+    border-top: 3px solid black;
+}
+
+.BlogDivider button
+{
+    position: absolute;
+    bottom: 84em;
+    right: -2.5em;
+    margin: 0.5em 4.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1.3px;
+    padding: 7px 0px;
+    width: 100px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+.BlogDivider button:hover
+{
+    background: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1.3px;    
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.3s;
+}
+/*START: ARTICLE*/
+.BlogContainer
+{
+    display: flex;
+}
+.BlogContainer div
+{
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 3px rgba(209, 209, 209, 0.7);
+    border-radius: 3px;
+    align-items: center;
+    margin: 2em 1.5em;
+    padding: 30px;
+    width: 100%;
+    height: 370px;
+}
+.BlogContainer img
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 3px;
+    cursor: pointer;
+    /*Centers the Item*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*Centers the Item*/
+}
+.BlogContainer h2
+{
+    padding: 15px 0;
+    font-family: League Spartan;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+.BlogContainer button
+{
+    display: block;
+    margin: auto;
+    background: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: white;
+    border-style: none;
+    border-radius: 2px;
+    border-width: 1.3px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.BlogContainer div:hover
+{
+    /*
+    background-color: rgba(207, 207, 207, 0.6);
+    */
+    transition: 0.5s;
+    
+    box-shadow: 0px 0px 25px 3px rgba(126, 126, 126, 0.7);
+    
+}
+.BlogContainer div:hover img
+{
+    /*
+    box-shadow: 0px 0px 10px 3px rgba(165, 165, 165, 0.3);
+    */
+    transition: 0.3s;
+}
+.BlogContainer button:hover
+{
+    background: rgb(233, 233, 233);
+    color: black;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1.3px;    
+    transition: 0.3s;
+    padding: 6px 15px;
+}
+/*END: ARTICLE*/
+/*END: BLOG CONTENT*/
+
+
+
